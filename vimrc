@@ -17,9 +17,14 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 
+set number " line number
+set shortmess=a "avoid press ENTER most of time
+set nocp
+execute pathogen#infect()
 set hlsearch
-
-
+syntax enable
+set background=dark
+colorscheme solarized
 
 command DelBlankMutt :v/^.\{43,4000\}.*$/d
 command MuttHlAnswer :g/<span style="color:black">
